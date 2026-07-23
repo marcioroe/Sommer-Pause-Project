@@ -3,7 +3,7 @@ def kicktipp_points(predicted: tuple[int, int], actual: tuple[int, int]) -> int:
 
     4 points for the exact result, 3 for the correct goal difference (this
     also covers a correctly tipped draw with the wrong exact score, since a
-    draw always has a goal difference of 0), 1 for correctly tipping only
+    draw always has a goal difference of 0), 2 for correctly tipping only
     the winner/draw, 0 otherwise.
 
     Args:
@@ -24,6 +24,6 @@ def kicktipp_points(predicted: tuple[int, int], actual: tuple[int, int]) -> int:
     predicted_tendency = (predicted_diff > 0) - (predicted_diff < 0)
     actual_tendency = (actual_diff > 0) - (actual_diff < 0)
     if predicted_tendency == actual_tendency:
-        return 1
+        return 2
 
     return 0
