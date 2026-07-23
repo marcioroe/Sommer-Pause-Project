@@ -1,8 +1,8 @@
 import math
 
 from .features import build_match_row
-from .poisson_regressor import PoissonRegressor
-from .scoring import kicktipp_points
+from ..poisson_regressor import PoissonRegressor
+from ..scoring import kicktipp_points
 
 
 def _poisson_pmf(k: int, rate: float) -> float:
